@@ -1,7 +1,7 @@
 # openssh_for_windows
 Installation and configuration of a secure configuration of OpenSSH for Windows 10 (1809 &amp; later) and Server 2019
 
-Please note that this is something of a quick-and-dirty script in terms of the basic powershell used.
+Please note that the provided item is something of a quick-and-dirty script in terms of the basic powershell used.
 It is not meant to be exemplary coding, the focus on this was the resulting configuration and its security,
 the provided powershell script does no error-checking and is in fact quite rudimentary.
 
@@ -11,9 +11,9 @@ the provided powershell script does no error-checking and is in fact quite rudim
  For more info, please see https://www.ssh.com/ssh/public-key-authentication
  For the key type, ed25519 is recommended, and supported with the version of OpenSSH server that will be installed.
 
- IMPORTANT: YOU MUST adjust (and or add to) the desired external IPs below where noted in the script ("Adjust the built-in Windows firewall" section), AND you must already have ssh installed and working, client-side (per above).
+ IMPORTANT: YOU MUST adjust (and or add to) the desired external IPs where noted in the script ("Adjust the built-in Windows firewall" section), AND you must already have ssh installed and working, client-side (per above).
 
- CRITICAL: You must have an existing, available, local admin account on each Windows endpoint you want to connect to.
+ CRITICAL: You must have an existing, available, local (typically also) admin account on each Windows endpoint you want to connect to.
  It is fine and recommended in an AD environment that you manage any such accounts via LAPS,
  see https://www.microsoft.com/en-us/download/details.aspx?id=46899
  NOTE: The setup below will allow you to connect to the designated account WITHOUT needing to authenticate.

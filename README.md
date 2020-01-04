@@ -13,7 +13,7 @@ the provided powershell script does no error-checking and is in fact quite rudim
 
  IMPORTANT: YOU MUST adjust (and or add to) the desired external IPs where noted in the script ("Adjust the built-in Windows firewall" section), AND you must already have ssh installed and working, client-side (per above).
 
- CRITICAL: You must have an existing, available, local (typically also) admin account on each Windows endpoint you want to connect to, for use with a config management tool - bet t=it Ansible or another such other tool of your choosing.
+ CRITICAL: You must have an existing, available, local (typically also) admin account on each Windows endpoint you want to connect to, for use with a config management tool - be it Ansible or another such other tool of your choosing.
  It is fine and recommended in an AD environment that you manage any such accounts via LAPS,
  see https://www.microsoft.com/en-us/download/details.aspx?id=46899
  NOTE: The setup below will allow you to connect to the designated account WITHOUT needing to authenticate.

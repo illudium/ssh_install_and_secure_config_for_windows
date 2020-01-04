@@ -1,5 +1,5 @@
-ssh_for_windows
-
+# ssh_for_windows
+#
 # Please note that this is something of a quick-and-dirty script in terms of the basic powershell used.
 # It is not meant to be exemplary coding, the focus on this was the resulting configuration and its security,
 # the provided powershell script does no error-checking and is in fact quite rudimentary.
@@ -23,7 +23,7 @@ ssh_for_windows
 # How you implement this on existing Windows end-points is a matter of your own choosing, based on existing
 # management tools and options :-)
 
-Add-WindowsCapability –online –Name "OpenSSH.Server~~~~0.0.1.0"
+Add-WindowsCapability â€“online â€“Name "OpenSSH.Server~~~~0.0.1.0"
 
 Set-Service sshd -StartupType Automatic
 

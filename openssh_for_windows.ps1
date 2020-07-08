@@ -37,13 +37,15 @@ Set-NetFirewallrule -Name "OpenSSH-Server-In-TCP" -Action Allow
 
 $fwRule = Get-NetFirewallrule -Name "OpenSSH-Server-In-TCP"
 
-# ADJUST THESE
+# !!! ADJUST THESE !!! Modify accordingly for the desired remote IPs you want to permit to access the host in question.
 $ips = @("192.168.123.7", "192.168.17.118", "192.168.0.117-192.168.0.118")
 
-foreach($r in $fwRule) { Set-NetFirewallRule -Name $r.Name -RemoteAddress $ips } { Set-NetFirewallRule -Name $r.Name -RemoteAddress $ips }
+foreach($r in $fwRule) { Set-NetFirewallRule -Name $r.Name -RemoteAddress $ips }
 
 ## Setup ssh key-based authentication. 
-# ADJUST AS NEEDED based on the account-name in question on your endpoints.
+# ADJUST AS NEEDED based on the account-name in question on your endpoints, "localadmin" here is a suggestion.
+# You ALSO MUST of course, replace the item below 'Place the... (etc) with the content of your desired pub key portion of your ssh key.
+# Ed25519 is recommended and works from macOS (Mojave, Catalina) to Windows. See https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54
 
 mkdir 'C:\Users\localadmin\.ssh'
 New-Item 'C:\Users\localadmin\.ssh\authorized_keys'
@@ -67,6 +69,9 @@ Set-Content C:\Users\localadmin\.ssh\authorized_keys 'Place the pre-retrieved co
 (gc C:\ProgramData\ssh\sshd_config) -replace "       AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys", "#       AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys " | sc C:\ProgramData\ssh\sshd_config
 
 (gc C:\ProgramData\ssh\sshd_config) -replace "PasswordAuthentication yes", "PasswordAuthentication no" | sc C:\ProgramData\ssh\sshd_config
+
+# Covering both possibilities for thoroughness
+(gc C:\ProgramData\ssh\sshd_config) -replace "#PasswordAuthentication no", "PasswordAuthentication no" | sc C:\ProgramData\ssh\sshd_config
 
 ## Restart sshd to implement the changes made
 # 

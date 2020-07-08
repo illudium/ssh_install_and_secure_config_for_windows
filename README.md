@@ -1,5 +1,10 @@
 # openssh_for_windows
-Installation and configuration of a secure configuration of OpenSSH for Windows 10 (1809 &amp; later) and Server 2019
+
+You may or may not be aware that current versions of Windows provide the ability to install OpenSSH via built-in OS functionality, for a Microsoft-provided install of SSH. See https://devblogs.microsoft.com/powershell/using-the-openssh-beta-in-windows-10-fall-creators-update-and-windows-server-1709/
+
+As of W10 1809 and Server 2019, it's no longer a beta build/version, https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
+
+Which brings us to: Installation and configuration of a secure configuration of OpenSSH for Windows 10 (1809 &amp; later) and Server 2019
 
 Please note that the provided item is something of a quick-and-dirty script in terms of the basic powershell used.
 It is not meant to be exemplary coding, the focus on this was the resulting configuration and its security,

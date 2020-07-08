@@ -21,7 +21,7 @@ the provided powershell script does no error-checking and is in fact quite rudim
  CRITICAL: You must have an existing, available, local (typically also) admin account on each Windows endpoint you want to connect to, for use with a config management tool - be it Ansible or another such other tool of your choosing.
  It is fine and recommended in an AD environment that you manage any such accounts via LAPS,
  see https://www.microsoft.com/en-us/download/details.aspx?id=46899
- NOTE: The setup below will allow you to connect to the designated account WITHOUT needing to authenticate.
+ NOTE: The resulting setup will allow you to connect to the designated account WITHOUT needing to authenticate.
  It is incumbent on you - and URGENT, that you use a properly maintained & secured workstation from which to connect.
  
  Implementation per endpoint:

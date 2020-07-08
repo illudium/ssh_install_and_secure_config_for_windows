@@ -8,7 +8,7 @@
 # You will need to have SSH already configured and operational client-side (on your workstation),
 # and the content of your chosen & working ssh .pub keypair.
 # For more info, please see https://www.ssh.com/ssh/public-key-authentication
-# For the key type, ed25519 is recommended, and supported with the version of OpenSSH server that will be installed.
+# For the key type, ed25519 is recommended and supported with the version of OpenSSH server that will be installed.
 #
 # IMPORTANT: YOU MUST adjust (and or add to) the desired external IPs below in the # Adjust the built-in Windows firewall
 # section, AND you must already have ssh installed and working, client-side (per above).

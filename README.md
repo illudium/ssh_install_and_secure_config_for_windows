@@ -1,5 +1,32 @@
 # openssh_for_windows
 
+UPDATE, Aug 2021:
+I don't really recommend the below method any longer.
+If it fits within your needs/parameters from a security perspective I suggest the following:
+
+#1
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Internet Explorer\Main" -Name "DisableFirstRunCustomize" -Value 2
+
+#2
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
+
+#3
+Install-Module WinSSH
+
+#3
+Import-Module WinSSH
+
+#4 (allow the above to complete...)
+Start-Sleep -s 10 
+
+#4
+Install-WinSSH -GiveWinSSHBinariesPathPriority -ConfigureSSHDOnLocalHost
+$InstallWinSSHResult = Install-WinSSH -GiveWinSSHBinariesPathPriority -ConfigureSSHDOnLocalHost
+
+
+
+####### OLD, Original README:
+
 You may or may not be aware that current versions of Windows provide the ability to install OpenSSH via built-in OS functionality, for a Microsoft-provided install of SSH. See https://devblogs.microsoft.com/powershell/using-the-openssh-beta-in-windows-10-fall-creators-update-and-windows-server-1709/
 
 As of W10 1809 and Server 2019, it's no longer a beta build/version, https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse

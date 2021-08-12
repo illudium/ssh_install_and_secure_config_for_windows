@@ -1,10 +1,13 @@
 # openssh_for_windows
 
 UPDATE, Aug 2021:
-I don't really recommend the below method any longer.
-If it fits within your needs/parameters from a security perspective I suggest the following:
+I don't really recommend the existing method any longer for instaling SSH in Windows (Microsoft's version is lagging too far behind).
+If it fits within your needs/parameters from a security perspective I suggest the following, below. HOWEVER !! If you do run with this,
+please **DO** look at my existing script and DO enable ssh-key auth only, and DO limit connections by external source IP(s).
 
-#1
+The WinSSH module does appear to install/use Chocolatey to get SSH installed, so the usual warnings apply: USE AT YOUR OWN RISK !
+
+#1 Required for some of the below to work.
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Internet Explorer\Main" -Name "DisableFirstRunCustomize" -Value 2
 
 #2

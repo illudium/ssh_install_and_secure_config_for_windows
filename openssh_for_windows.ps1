@@ -2,7 +2,7 @@
 #
 # Please note that this is something of a quick-and-dirty script in terms of the basic powershell used.
 # It is not meant to be exemplary coding, the focus on this was the resulting configuration and its security,
-# the provided powershell script does no error-checking and is in fact quite rudimentary.
+# the provided powershell script does **_NO_ERROR_CHECKING_** and is in fact quite rudimentary.
 #
 # REQUIREMENTS:
 # You will need to have SSH already configured and operational client-side (on your workstation),

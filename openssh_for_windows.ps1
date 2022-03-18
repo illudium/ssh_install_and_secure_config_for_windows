@@ -1,7 +1,7 @@
 # ssh_for_windows PLEASE READ THE BELOW INFO !!
 # Updated for 2021/2022. DO NOT USE THE ORIGINAL SCRIPT BELOW.
 # Instead, recommended steps are as follows, per https://github.com/illudium/ssh_install_and_secure_config_for_windows
-##### USE BELOW STEPS INSTEAD #####
+##### USE BELOW STEPS INSTEAD OF THE ORIGINAL SCRIPT FURTHER BELOW THIS SECTION #####
 ## Step 1 Required for some of the below to work. 
 # Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Internet Explorer\Main" -Name "DisableFirstRunCustomize" -Value 2
 #

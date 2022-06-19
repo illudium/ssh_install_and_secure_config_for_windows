@@ -1,6 +1,6 @@
 # openssh_for_windows
 
-UPDATED, Jun 2022 with a better (far more proper PS Execution policy for this job):
+UPDATED, Jun 2022 with a better (far more proper) PS Execution policy for this job:
 
 I don't really recommend the existing method any longer for instaling SSH in Windows (Microsoft's version is lagging too far behind).
 If it fits within your needs/parameters from a security perspective I suggest the following, below. HOWEVER !! If you do run with this,

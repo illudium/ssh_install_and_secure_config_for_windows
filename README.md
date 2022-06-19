@@ -1,6 +1,6 @@
 # openssh_for_windows
 
-UPDATE, Aug 2021:
+UPDATED, Jun 2022 with a better (far more proper PS Execution policy for this job):
 I don't really recommend the existing method any longer for instaling SSH in Windows (Microsoft's version is lagging too far behind).
 If it fits within your needs/parameters from a security perspective I suggest the following, below. HOWEVER !! If you do run with this,
 please **DO** look at my existing script and DO enable ssh-key auth only, and DO limit connections by external source IP(s).
